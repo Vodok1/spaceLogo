@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rationale", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+  height: 100vh;
+}
+nav {
+  width: 90%;
+  margin: auto;
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar {
+  min-width: 30%;
+}
+.logo {
+  transform: translateX(-300%);
+  font-size: 1.9rem;
+  padding: 0.3rem 2rem;
+  margin: 0.5rem;
+  background-color: rgb(17, 26, 40);
+  color: white;
+}
+.navbar ul {
+  transform: translateX(+1000%);
+  font-size: 1.5rem;
+  color: rgb(17, 26, 40);
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  list-style: none;
+}
+.navbar ul li {
+  cursor: pointer;
+}
+.navbar ul li:hover {
+  scale: 1.2;
+}
+.main {
+  opacity: 0;
+  min-height: 82vh;
+  background-image: url(./back.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.377);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+}
+
+.uppertext {
+  color: rgb(255, 255, 255);
+  padding: 2rem 0rem;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+}
+.container img {
+  transform: rotateZ(180deg);
+  max-height: 4rem;
+  max-width: 4rem;
+}
+.article {
+  font-family: "Caveat", cursive;
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  padding: 3rem 0 1rem 0;
+}
+.article-author {
+  font-family: "Caveat", cursive;
+  color: white;
+  padding-top: 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.joinnow {
+  cursor: pointer;
+  color: white;
+  margin: 4rem 0;
+  padding: 1.2rem 3rem;
+  background-color: rgb(17, 26, 40);
+  text-decoration: none;
+  border: none;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+.joinnow:hover {
+  scale: 1.1;
+  background-color: white;
+  color: rgb(17, 26, 40);
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+}
+footer span {
+  margin-right: 1rem;
+}
+.joinnowsection {
+  color: rgb(17, 26, 40);
+  position: absolute;
+  background-color: white;
+  top: 25%;
+  width: 30%;
+  height: 50vh;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(-800%);
+}
+.joinnowsection h1 {
+  padding: 1.5rem 0;
+}
+.joinnowsection h2 {
+  font-size: 1.2rem;
+}
+.mailform {
+  display: flex;
+  justify-content: center;
+}
+.mailform button {
+  font-size: 1.7rem;
+  color: white;
+  padding: 0.5rem;
+  border-style: none;
+  background-color: rgb(17, 26, 40);
+  transition: all 0.2s ease-in;
+}
+.mailform button:hover {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+.mailform input {
+  padding: 0 2rem;
+  font-size: 1.2rem;
+}
+.joinnowsection label {
+  padding: 1.5rem;
+}
+
+.contactMenu {
+  position: relative;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20vh;
+  z-index: 2;
+  transform: translateY(-150%);
+}
+.contactMenu ul {
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 1fr 5%;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-items: center;
+  list-style: none;
+}
+.contactMenu ul li {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.contactMenu ul li a {
+  text-decoration: none;
+  color: black;
+}
+.contactMenu ul li img {
+  max-width: 2rem;
+  text-decoration: none;
+  list-style: none;
+}
+.exitcontact,
+.exitjoinsection {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  font-weight: 800;
+}
+#firstcont {
+  grid-column: 2/3;
+}
+@media screen and (max-width: 1024px) {
+  nav {
+    justify-content: center;
+  }
+  .navbar ul li {
+    padding: 0 0.5rem;
+  }
+
+  .container {
+    font-size: 0.4rem;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .article {
+    padding: 0.2rem;
+  }
+  .contactMenu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .contactMenu ul li {
+    padding: 0.3rem 0;
+  }
+  .joinnowsection {
+    width: 100%;
+  }
+  .joinnowsection h1 {
+    text-align: center;
+  }
+  .footer {
+    height: 10vh;
+    z-index: 3;
+  }
+}
